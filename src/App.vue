@@ -1,15 +1,12 @@
 <template>
    <div>hi</div>
-   <frank></frank>
+   <router-view></router-view>
 </template>
 
 <script>
-import Frank from './components/Frank.vue'
 
 export default {
   name: 'App',
-  components: {
-    Frank
-  }
+
 }
 </script>
