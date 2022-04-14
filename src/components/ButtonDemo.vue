@@ -2,7 +2,7 @@
   <div>button示例</div>
   <h1>示例1</h1>
   <div>
-    <Button>你好</Button>
+    <Button @click="onClick">你好</Button>
     <Button theme="button">你好</Button>
     <Button theme="link">你好</Button>
     <Button theme="text">你好</Button>
@@ -48,7 +48,8 @@
     </div>
     <h1>示例5</h1>
     <div>
-      <Button loading>loading</Button>
+      <Button loading>加载中</Button>
+      <Button>加载完毕</Button>
     </div>
   </div>
 </template>
