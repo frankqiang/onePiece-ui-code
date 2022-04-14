@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <Topnav class="nav"/>
+    <Topnav class="nav" />
     <div class="content">
       <aside v-if="asideVisible">
         <h2>组件列表</h2>
@@ -31,10 +31,10 @@ import Topnav from '../components/Topnav.vue'
 import { inject, Ref } from 'vue'
 export default {
   components: { Topnav },
-  setup(){
-    const asideVisible=inject<Ref<boolean>>('asideVisible')
-    return {asideVisible}
-  }
+  setup() {
+    const asideVisible = inject<Ref<boolean>>('asideVisible')
+    return { asideVisible }
+  },
 }
 </script>
 
@@ -51,7 +51,7 @@ export default {
     padding-top: 60px;
     padding-left: 156px;
     @media (max-width: 500px) {
-      padding-left: 0; 
+      padding-left: 0;
     }
   }
 }
@@ -63,7 +63,7 @@ export default {
   > main {
     flex-grow: 1;
     padding: 16px;
-    background: lightgreen;
+    background: white;
   }
 }
 aside {
@@ -75,7 +75,7 @@ aside {
   left: 0;
   padding-top: 70px;
   height: 100%;
- 
+
   > h2 {
     margin-bottom: 4px;
   }
@@ -84,7 +84,7 @@ aside {
       padding: 4px 0;
     }
   }
-  main{
+  main {
     overflow: auto;
   }
 }
