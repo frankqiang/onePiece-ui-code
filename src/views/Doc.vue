@@ -24,9 +24,12 @@
 
 <script lang='ts'>
 import Topnav from '../components/Topnav.vue'
+import { inject, Ref } from 'vue'
 export default {
   components: { Topnav },
-
+  setup(){
+    const asideVisible=inject<Ref<boolean>>('asideVisible')
+  }
 }
 </script>
 
