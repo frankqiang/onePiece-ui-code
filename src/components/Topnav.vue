@@ -1,23 +1,19 @@
 <template>
-  <div>
-    <topnav/>
-    <div class="banner">
-      <h1>咕噜UI</h1>
-      <h2>一个厉害的UI框架</h2>
-      <p class="actions">
-        <a href="">GitHub</a>
-        <a href="">开始</a>
-      </p>
+  <div class="topnav">
+      <div class="logo">LOGO</div>
+      <ul class="menu">
+        <li>菜单1</li>
+        <li>菜单2</li>
+      </ul>
     </div>
-  </div>
 </template>
-<script lang='ts'>
-import Topnav from '../components/Topnav.vue'
+
+<script>
 export default {
-  components: { Topnav },
-  
+
 }
 </script>
+
 <style lang="scss" scoped>
 .topnav {
   background: pink;
