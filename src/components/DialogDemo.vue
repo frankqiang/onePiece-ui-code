@@ -2,7 +2,7 @@
   <div>Dialog示例</div>
   <h1>示例1</h1>
   <Button @click="toggle">toggle</Button>
-  <Dialog :visible="x" />
+  <Dialog v-model:visible="x" :ok="confirm" :cancel="cancel" />
 </template>
 
 <script>
@@ -16,7 +16,11 @@ export default {
     const toggle = () => {
       x.value = !x.value
     }
-    return { x, toggle }
+    const confirm = () => {
+      return false
+    }
+    const cancel = () => {}
+    return { x, toggle, confirm, cancel }
   },
 }
 </script>
