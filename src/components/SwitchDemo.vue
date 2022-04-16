@@ -15,7 +15,6 @@ import Demo from './Demo.vue'
 export default {
   components: { Demo },
   setup() {
-    const bool = ref(false)
     return { Switch1Demo, Switch2Demo }
   },
 }

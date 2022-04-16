@@ -5,7 +5,7 @@
       <component :is="component" />
     </div>
     <div class="demo-actions">
-      <Button @click="toggleCode">查看代码</Button>
+      <Button @click="toggleCode">{{codeVisible?'隐藏代码':'查看代码'}}</Button>
     </div>
     <div class="demo-code" v-if="codeVisible">
       <pre class="language-html" v-html="html" />
@@ -44,7 +44,8 @@ $border-color: #d9d9d9;
   border: 1px solid $border-color;
   margin: 16px 0 32px;
   > h2 {
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: 700;
     padding: 8px 16px;
     border-bottom: 1px solid $border-color;
   }

@@ -29,6 +29,9 @@
           <li>
             <router-link to="/doc/tabs">Tabs组件</router-link>
           </li>
+          <li>
+            <router-link to="/doc/carousel">Carousel组件</router-link>
+          </li>
         </ol>
       </aside>
       <main>
