@@ -1,8 +1,9 @@
 <demo>
-支持 disabled
+  常规用法
 </demo>
+
 <template>
-  <Switch v-model:value="bool" disabled />
+  <Switch v-model:value="bool" />
 </template>
 
 <script lang='ts'>
