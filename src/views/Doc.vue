@@ -41,6 +41,9 @@
           <li>
             <router-link to="/doc/message">Message组件</router-link>
           </li>
+          <li>
+            <router-link to="/doc/bread">Bread组件</router-link>
+          </li>
         </ol>
       </aside>
       <main>
