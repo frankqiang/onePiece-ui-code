@@ -3,11 +3,11 @@
     <div class="topnavAndBanner">
       <topnav />
       <div class="banner">
-        <h1>咕噜UI</h1>
+        <h1>草帽UI</h1>
         <h2>一个厉害的UI框架</h2>
         <p class="actions">
-          <a href="https://github">GitHub</a>
-          <router-link to="/doc">开始</router-link>
+          <a href="https://github">源码地址</a>
+          <router-link to="/doc">开始使用</router-link>
         </p>
       </div>
     </div>
@@ -22,10 +22,10 @@
         </li>
         <li>
           <svg>
-            <use xlink:href="#icon-ts" />
+            <use xlink:href="#icon-design" />
           </svg>
-          <h3>基于 TypeScript</h3>
-          <p>源代码采用 TypeScript 书写</p>
+          <h3>可复用性高</h3>
+          <p>样式设计合理，你可以轻松的覆盖样式</p>
         </li>
         <li>
           <svg>
@@ -44,7 +44,7 @@ export default {
   components: { Topnav },
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss" >
 $green: #02bcb0;
 $color: #007974;
 $border-radius: 4px;
@@ -55,6 +55,7 @@ $border-radius: 4px;
     rgba(183, 233, 230, 1) 100%
   );
   clip-path: ellipse(80% 60% at 50% 40%);
+  padding-bottom: 88px;
 }
 .features {
   margin: 64px auto;
@@ -120,7 +121,7 @@ $border-radius: 4px;
       display: inline-block;
       border-radius: $border-radius;
       padding: 8px 24px;
-      font-size: 26px;
+      font-size: 20px;
       &:hover {
         text-decoration: none;
       }
@@ -129,7 +130,8 @@ $border-radius: 4px;
 }
 .topnav {
   display: flex;
-  padding: 16px;
+  padding: 16px 60px;
+  box-shadow: 0 5px 5px rgb(51 51 51 / 10%);
   > .logo {
     max-width: 6em;
     margin-right: auto;

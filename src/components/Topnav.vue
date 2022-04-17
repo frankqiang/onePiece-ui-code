@@ -40,7 +40,7 @@ $color: #007974;
 .topnav {
   color: $color;
   display: flex;
-  padding: 16px;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -48,6 +48,7 @@ $color: #007974;
   z-index: 20;
   justify-content: center;
   align-items: center;
+
   > .logo {
     max-width: 6em;
     margin-right: auto;

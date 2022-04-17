@@ -18,37 +18,37 @@
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to="/doc/switch">Switch组件</router-link>
+            <router-link to="/doc/switch">Switch 开关组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/button">Button组件</router-link>
+            <router-link to="/doc/button">Button 按钮组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">Tabs组件</router-link>
+            <router-link to="/doc/tabs">Tabs 标签页组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/carousel">Carousel组件</router-link>
+            <router-link to="/doc/carousel">Carousel 轮播图组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/dialog">Dialog组件</router-link>
+            <router-link to="/doc/dialog">Dialog 弹出层组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/checkbox">Checkbox组件</router-link>
+            <router-link to="/doc/checkbox">Checkbox 复选框组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/confirm">Confirm组件</router-link>
+            <router-link to="/doc/confirm">Confirm 对话框组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/message">Message组件</router-link>
+            <router-link to="/doc/message">Message 消息提示组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/bread">Bread组件</router-link>
+            <router-link to="/doc/bread">Bread 面包屑导航组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/city">City组件</router-link>
+            <router-link to="/doc/city">City 城市选择组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/pagination">Pagination组件</router-link>
+            <router-link to="/doc/pagination">Pagination 分页组件</router-link>
           </li>
         </ol>
       </aside>
@@ -79,6 +79,7 @@ $aside-index: 10;
   height: 100vh;
   > .nav {
     flex-shrink: 0;
+    background-color: #f9f9f9;
   }
   > .content {
     flex-grow: 1;
@@ -90,26 +91,32 @@ $aside-index: 10;
   }
 }
 .content {
+  margin-top: 15px;
   display: flex;
   > aside {
     flex-shrink: 0;
+    padding: 100px 0;
   }
   > main {
     flex-grow: 1;
-    padding: 16px;
-    background: white;
+    padding: 20px 100px;
+    background-color: #f9f9f9;
+  }
+  @media (max-width: 500px) {
+    > main {
+      padding: 16px 0;
+    }
   }
 }
 aside {
-  background: lightblue;
-  width: 150px;
-  padding: 16px 0;
   position: fixed;
   top: 0;
   left: 0;
   padding-top: 70px;
   height: 100%;
   z-index: $aside-index;
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #f9f9f9;
   > h2 {
     margin-bottom: 4px;
     padding: 0 16px;
@@ -122,7 +129,7 @@ aside {
         text-decoration: none;
       }
       .router-link-active {
-        background: white;
+        background-color: #e5f2fa;
       }
     }
   }

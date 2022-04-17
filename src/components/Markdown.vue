@@ -21,3 +21,8 @@ export default {
   },
 }
 </script>
+<style lang="scss">
+.markdown-body {
+  background-color: rgb(249, 249, 249);
+}
+</style>
