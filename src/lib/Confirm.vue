@@ -1,70 +1,81 @@
 <template>
-  <div class="gulu-dialog" v-show="visible" :class="{fade}">
+  <div class="gulu-confirm" :class="{fade}">
     <div class="wrapper" :class="{fade}">
       <div class="header">
         <h3>{{title}}</h3>
-        <a @click="closeDialog" href="JavaScript:;" class="iconfont icon-close-new"></a>
+        <a @click="cancel" href="JavaScript:;" class="iconfont icon-close-new"></a>
       </div>
       <div class="body">
-        <slot />
+        <i class="iconfont icon-warning"></i>
+        <span>{{text}}</span>
       </div>
       <div class="footer">
-        <slot name="footer" />
+        <Button @click="cancel" level="normal" size="normal">取消</Button>
+        <Button @click="submit" level="main" size="normal">确认</Button>
       </div>
     </div>
   </div>
 </template>
 <script>
-import { ref, watch } from 'vue'
+import { onMounted, ref } from 'vue'
+import Button from '../lib/Button.vue'
 export default {
+  components: { Button },
   props: {
     title: {
       type: String,
+      default: '温馨提示',
+    },
+    text: {
+      type: String,
       default: '',
     },
-    visible: {
-      type: Boolean,
-      default: false,
+    cancelCallback: {
+      type: Function,
+    },
+    confirmCallback: {
+      type: Function,
     },
   },
-  setup(props, { emit }) {
-    console.log(props.visible)
+  setup(props) {
+    // 对话框默认关闭
     const fade = ref(false)
-    // visible的值为true打开对话框，否则就是关闭对话框，其实就是在控制fade的值
-    watch(
-      () => props.visible,
-      (newValue) => {
-        // TODO:结构和样式同时加上无过度效果，需要些延时。
-        setTimeout(() => {
-          fade.value = newValue
-        }, 0)
-      },
-      { immediate: true }
-    )
+    onMounted(() => {
+      // TODO:
+      // 过渡效果需要在元素创建完毕后，延时一会儿加上才会触发过渡效果
+      setTimeout(() => {
+        fade.value = true
+      }, 0)
+    })
 
-    // 自己关闭对话框，但是需要修改父组件提供的数据visible
-    const closeDialog = () => {
-      emit('update:visible', false)
+    // 取消
+    const cancel = () => {
+      props.cancelCallback()
     }
-    return { fade, closeDialog }
+
+    // 确认
+    const submit = () => {
+      props.confirmCallback()
+    }
+    return { fade, cancel, submit }
   },
 }
 </script>
 <style scoped lang="scss">
-.gulu-dialog {
+.gulu-confirm {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 8887;
+  z-index: 8888;
   background: rgba(0, 0, 0, 0);
   &.fade {
     transition: all 0.4s;
     background: rgba(0, 0, 0, 0.5);
   }
   .wrapper {
-    width: 600px;
+    width: 400px;
     background: #fff;
     border-radius: 4px;
     position: absolute;
@@ -77,34 +88,38 @@ export default {
       transform: translate(-50%, -50%);
       opacity: 1;
     }
+    .header,
+    .footer {
+      height: 50px;
+      line-height: 50px;
+      padding: 0 20px;
+    }
     .body {
       padding: 20px 40px;
       font-size: 16px;
       .icon-warning {
-        color: #cf4444;
+        color: #27ba9b;
         margin-right: 3px;
         font-size: 16px;
       }
     }
     .footer {
       text-align: center;
-      padding: 10px 0 30px 0;
+      .gulu-button {
+        margin-left: 20px;
+      }
     }
     .header {
       position: relative;
-      height: 70px;
-      line-height: 70px;
-      padding: 0 20px;
-      border-bottom: 1px solid #f5f5f5;
       h3 {
         font-weight: normal;
         font-size: 18px;
       }
       a {
         position: absolute;
-        right: 25px;
-        top: 25px;
-        font-size: 24px;
+        right: 15px;
+        top: 15px;
+        font-size: 20px;
         width: 20px;
         height: 20px;
         line-height: 20px;

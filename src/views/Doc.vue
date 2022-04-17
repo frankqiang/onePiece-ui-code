@@ -24,13 +24,22 @@
             <router-link to="/doc/button">Button组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/dialog">Dialog组件</router-link>
-          </li>
-          <li>
             <router-link to="/doc/tabs">Tabs组件</router-link>
           </li>
           <li>
             <router-link to="/doc/carousel">Carousel组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/dialog">Dialog组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/checkbox">Checkbox组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/confirm">Confirm组件</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/message">Message组件</router-link>
           </li>
         </ol>
       </aside>

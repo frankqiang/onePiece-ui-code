@@ -6,6 +6,7 @@
     "build": "vite build"
   },
   "dependencies": {
+    "@vueuse/core": "^8.1.2",
     "github-markdown-css": "^5.1.0",
     "marked": "^1.1.1",
     "prismjs": "^1.27.0",
