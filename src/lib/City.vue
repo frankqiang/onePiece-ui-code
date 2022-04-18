@@ -158,11 +158,11 @@ const getCityData = () => {
   z-index: 400;
   .select {
     border: 1px solid #e4e4e4;
-    height: 60px;
+    min-height: 60px;
     text-align: center;
     width: 350px;
     padding: 0 20px;
-    line-height: 58px;
+    line-height: 60px;
     cursor: pointer;
     &.active {
       background: #fff;
@@ -200,6 +200,60 @@ const getCityData = () => {
       padding: 0 3px;
       &:hover {
         background: #f5f5f5;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .gulu-city {
+    display: inline-block;
+    position: relative;
+    z-index: 400;
+    .select {
+      border: 1px solid #e4e4e4;
+      text-align: center;
+      width: 300px;
+      padding: 0 20px;
+      min-height: 60px;
+      line-height: 60px;
+      cursor: pointer;
+      &.active {
+        background: #fff;
+      }
+      .placeholder {
+        color: #999;
+        font-size: 25px;
+      }
+      .value {
+        color: #666;
+        font-size: 25px;
+      }
+      i {
+        font-size: 23px;
+        margin-left: 5px;
+      }
+    }
+    .option {
+      width: 300px;
+      border: 1px solid #e4e4e4;
+      position: absolute;
+      left: 0;
+      top: 60px;
+      background: #fff;
+      min-height: 30px;
+      line-height: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      > span {
+        width: 166px;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 4px;
+        padding: 0 3px;
+        &:hover {
+          background: #f5f5f5;
+        }
       }
     }
   }
