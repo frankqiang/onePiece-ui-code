@@ -105,4 +105,37 @@ export default {
     }
   }
 }
+@media (max-width: 500px) {
+  .pagination {
+    button {
+      margin: 0 5px;
+      background-color: #f4f4f5;
+      color: #606266;
+      outline: none;
+      border-radius: 2px;
+      padding: 0 4px;
+      margin: 5px;
+      vertical-align: top;
+      display: inline-block;
+      font-size: 16px;
+      height: 30px;
+      line-height: 30px;
+      cursor: pointer;
+      box-sizing: border-box;
+      text-align: center;
+      border: 0;
+
+      &[disabled] {
+        color: #c0c4cc;
+        cursor: not-allowed;
+      }
+
+      &.active {
+        cursor: not-allowed;
+        background-color: #409eff;
+        color: #fff;
+      }
+    }
+  }
+}
 </style>
