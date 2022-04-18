@@ -2,6 +2,7 @@
 支持 level
 </demo>
 <template>
+  <h3>level支持：main，danger，normal</h3>
   <div>
     <div>
       <Button level="main">主要按钮</Button>
@@ -29,3 +30,12 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+div {
+  margin-bottom: 15px;
+}
+h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+</style>

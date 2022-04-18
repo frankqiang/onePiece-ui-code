@@ -2,6 +2,7 @@
 支持 size
 </demo>
 <template>
+  <h3>size支持：big，small，normal</h3>
   <div>
     <div>
       <Button size="big">大大大</Button>
@@ -29,3 +30,12 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+div {
+  margin-bottom: 15px;
+}
+h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+</style>
