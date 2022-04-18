@@ -7,7 +7,7 @@
         <h2>站在巨人的船上，扬帆起航</h2>
         <p class="actions">
           <a href="https://github.com/frankqiang/onePiece-ui">github地址</a>
-          <a href="https://gitee.com/yiqiangtang/one-piece-ui">gitee地址</a>
+          <a class="hide" href="https://gitee.com/yiqiangtang/one-piece-ui">gitee地址</a>
           <router-link to="/doc">开始使用</router-link>
         </p>
       </div>
@@ -168,6 +168,9 @@ $border-radius: 4px;
         font-size: 20px;
         &:hover {
           text-decoration: none;
+        }
+        &.hide {
+          display: none;
         }
       }
     }
