@@ -6,7 +6,8 @@
         <h1>草帽UI</h1>
         <h2>站在巨人的船上，扬帆起航</h2>
         <p class="actions">
-          <a href="https://github">源码地址</a>
+          <a href="https://github.com/frankqiang/onePiece-ui">github地址</a>
+          <a href="https://gitee.com/yiqiangtang/one-piece-ui">gitee地址</a>
           <router-link to="/doc">开始使用</router-link>
         </p>
       </div>
