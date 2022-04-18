@@ -9,8 +9,6 @@
     <BreadItem to="/doc/button">Button组件</BreadItem>
     <BreadItem to="/doc/tabs">Tabs组件</BreadItem>
     <BreadItem to="/doc/carousel">Carousel组件</BreadItem>
-  </Bread>
-  <Bread>
     <BreadItem to="/doc/dialog">Dialog组件</BreadItem>
     <BreadItem to="/doc/checkbox">Checkbox组件</BreadItem>
     <BreadItem to="/doc/confirm">Confirm组件</BreadItem>

@@ -53,4 +53,31 @@ export default {
     line-height: 48px;
   }
 }
+@media (max-width: 500px) {
+  .gulu-bread {
+    display: flex;
+    padding: 25px 10px;
+    flex-wrap: wrap;
+    &-item {
+      a {
+        font-size: 16px;
+        color: #666;
+        transition: all 0.4s;
+        display: inline-block;
+        &:hover {
+          color: #11e0b3;
+        }
+      }
+      span {
+        font-size: 16px;
+      }
+    }
+    i {
+      font-size: 14px;
+      margin-left: 5px;
+      margin-right: 5px;
+      line-height: 25px;
+    }
+  }
+}
 </style>
