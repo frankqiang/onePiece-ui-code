@@ -5,7 +5,6 @@
       <div class="banner">
         <h1>草帽UI</h1>
         <h2>站在巨人的船上，扬帆起航</h2>
-
         <p class="actions">
           <a href="https://github">源码地址</a>
           <router-link to="/doc">开始使用</router-link>
@@ -124,7 +123,7 @@ $border-radius: 4px;
   }
 }
 .banner {
-  padding: 90px 0;
+  padding: 150px 0 40px 0;
   display: flex;
   justify-content: center;
   align-items: center;
