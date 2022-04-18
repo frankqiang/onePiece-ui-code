@@ -131,5 +131,64 @@ export default {
       }
     }
   }
+  @media (max-width: 500px) {
+    .wrapper {
+      width: 300px;
+      background: #fff;
+      border-radius: 4px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      opacity: 0;
+      &.fade {
+        transition: all 0.4s;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
+      .header,
+      .footer {
+        height: 50px;
+        line-height: 50px;
+        padding: 0 20px;
+      }
+      .body {
+        padding: 20px 40px;
+        font-size: 16px;
+        .icon-warning {
+          color: #27ba9b;
+          margin-right: 3px;
+          font-size: 16px;
+        }
+      }
+      .footer {
+        text-align: center;
+        .gulu-button {
+          margin-left: 20px;
+        }
+      }
+      .header {
+        position: relative;
+        h3 {
+          font-weight: normal;
+          font-size: 18px;
+        }
+        a {
+          position: absolute;
+          right: 15px;
+          top: 15px;
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+          color: #999;
+          &:hover {
+            color: #666;
+          }
+        }
+      }
+    }
+  }
 }
 </style>
