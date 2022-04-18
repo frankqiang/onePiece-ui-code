@@ -104,7 +104,9 @@ $aside-index: 10;
   }
   @media (max-width: 500px) {
     > main {
-      padding: 16px 0;
+      padding: 16px;
+      width: 100%;
+      overflow: auto;
     }
   }
 }

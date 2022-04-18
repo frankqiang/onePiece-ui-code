@@ -5,9 +5,9 @@
       <!-- 显示的图片加上fade -->
       <li class="carousel-item" v-for="(item,i) in sliders" :key="i" :class="{fade:index===i}">
         <!-- 图片轮播 -->
-        <RouterLink v-if="item.imgUrl" to="/">
+        <a href="javascript:;" v-if="item.imgUrl">
           <img :src="item.imgUrl" />
-        </RouterLink>
+        </a>
       </li>
     </ul>
     <!-- 上一张 -->
@@ -123,8 +123,6 @@ export default {
 .gulu-carousel {
   width: 100%;
   height: 100%;
-  min-width: 300px;
-  min-height: 150px;
   position: relative;
   .carousel {
     &-body {
@@ -188,6 +186,28 @@ export default {
       }
       &.next {
         right: 20px;
+      }
+    }
+    @media (max-width: 500px) {
+      &-btn {
+        width: 30px;
+        height: 30px;
+        background: rgba(0, 0, 0, 0.2);
+        color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 110px;
+        z-index: 2;
+        text-align: center;
+        line-height: 30px;
+        opacity: 0;
+        transition: all 0.5s;
+        &.prev {
+          left: 10px;
+        }
+        &.next {
+          right: 10px;
+        }
       }
     }
   }

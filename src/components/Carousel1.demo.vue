@@ -35,4 +35,10 @@ export default {
   width: 750px;
   height: 500px;
 }
+@media (max-width: 500px) {
+  .home-banner {
+    width: 100%;
+    height: 241px;
+  }
+}
 </style>
