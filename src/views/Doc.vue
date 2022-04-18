@@ -99,12 +99,12 @@ $aside-index: 10;
   }
   > main {
     flex-grow: 1;
-    padding: 20px 100px;
+    padding: 20px 0px 20px 100px;
     background-color: #f9f9f9;
   }
   @media (max-width: 500px) {
     > main {
-      padding: 16px;
+      padding: 16px 0px 16px 16px;
       width: 100%;
       overflow: auto;
     }

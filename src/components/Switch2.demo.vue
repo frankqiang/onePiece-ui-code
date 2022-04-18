@@ -2,6 +2,7 @@
 支持 disabled
 </demo>
 <template>
+  <h3>支持disabled：true，false</h3>
   <Switch v-model:value="bool" disabled />
 </template>
 
@@ -16,3 +17,9 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+</style>
