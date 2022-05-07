@@ -1,4 +1,4 @@
-// 提供一个能够显示xtx-message组件的函数
+// 提供一个能够显示message组件的函数
 // 这个函数将来：可以导入直接使用，也可以挂载在vue实例的原型上
 // import Message from 'message.js'  使用方法：Message({type:'error',text:'提示文字'})
 // 还可以这样使用：this.$message({type:'error',text:'提示文字'})

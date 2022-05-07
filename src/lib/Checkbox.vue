@@ -11,7 +11,7 @@
 <script>
 import { useVModel } from '@vueuse/core'
 export default {
-  name: 'XtxCheckbox',
+  name: 'Checkbox',
   props: {
     modelValue: {
       type: Boolean,
